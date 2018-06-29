@@ -29,4 +29,21 @@ Run:
 python SarsaLambdaLearner.py
 ```
 
+# Docker
+Build:
+```
+docker build -t basic-reinforcement-learning .
+```
 
+## Q-Learning
+```
+docker run -it --user $(id -u) -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged basic-reinforcement-learning python QLearner.py
+```
+## Sarsa
+```
+docker run -it --user $(id -u) -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged basic-reinforcement-learning python SarsaLearner.py
+```
+## Sarsa lambda
+```
+docker run -it --user $(id -u) -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged basic-reinforcement-learning python SarsaLambdaLearner.py
+```
